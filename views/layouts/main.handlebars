@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ethical Eating - {{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--Header and navigation bar-->
+    <header>
+        <div><img src="/images/banner.png" alt="banner" id="banner"></div>
+        <div class="navbar_div">
+        <div class="navbar">
+            <a class="active" href="/">HOME</a>
+            <a href="/build">BUILD A RECIPE</a>
+            <a href="/faq">FAQ</a>
+            {{#if user}}
+            <div class="account">
+                <a class="profile_name">PROFILE: {{this.user.username}}</a>
+                <a style="pointer-events: none">|</a>
+                <a href="/my_recipes">MY RECIPES</a>
+                <a style="pointer-events: none">|</a>
+                <form class="logout_form" action="/logout?_method=DELETE" method="POST">
+                    <button class="logout_button" type="submit">LOGOUT</button>
+                </form>
+            </div>
+            {{else}}
+            <div class="account">
+                <a href="/login">LOG IN</a>
+                <a href="#" id="register_button" class="register_button">REGISTER</a>
+            </div>
+            {{/if}}
+        </div>
+        </div>
+    </header>
+    </div>
+
+    <!--Model-->
+    <div class="register_modal_container">
+        <div class="register_modal_content">
+            <button id="register_close" class="register_close">+</button>
+            <h2 class="sign_up_title">SIGN UP</h2>
+            <p>Create an Ethical Eating account</p>
+            <form>
+                <fieldset class="form_fieldset">
+                    <div class="form_input">
+                        <label class="first_name_label" for="first_name">First Name</label>
+                        <label class="last_name_label" for="last_name">Last Name</label>
+                        <div class="name_input_container">
+                            <input type="text" name="first_name" id="first_name" value="" size="25" maxlength="35">
+                            <div id="first_name_error" class="error_msg"></div> <!--Reserve space for error message-->
+                        </div>
+                        <div class="name_input_container">
+                            <input type="text" name="last_name" id="last_name" value="" size="25" maxlength="35">
+                            <div id="last_name_error" class="error_msg"></div> <!--Reserve space for error message-->
+                        </div>
+                    </div>
+                    <div class="form_input">
+                        <div>
+                            <label for="username">Username</label>
+                        </div>
+                        <input type="text" name="username" id="user" value="" size="60" maxlength="35">
+                        <div id="username_error" class="error_msg"></div> <!--Reserve space for error message-->
+                    </div>
+                    <div class="form_input">
+                        <div>
+                            <label for="email">Email</label>
+                        </div>
+                        <input type="email" name="email" id="email" value="" size="60" maxlength="35">
+                        <div id="email_error" class="error_msg"></div> <!--Reserve space for error message-->
+                    </div>
+                    <div class="form_input">
+                        <div>
+                            <label for="password">Password</label>
+                            <span class="password_req">(6 or more alphanumeric characters)</span>
+                        </div>
+                        <input type="password" name="password" id="pass" value="" size="60" maxlength="35">
+                        <div id="password_error" class="error_msg"></div> <!--Reserve space for error message-->
+                    </div>
+                    <div class="form_input">
+                        <div>
+                            <label for="confirm_password">Confirm Password</label>
+                        </div>
+                        <input type="password" name="confirm_password" id="confirm_password" value="" size="60" maxlength="35">
+                        <div id="confirm_password_error" class="error_msg"></div> <!--Reserve space for error message-->
+                    </div>
+                    <div class="form_submit">
+                        <button id="create_account_button" type="submit">Create Account</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="success_modal_content">
+            <div class="success_msg_container">
+                <h2 class="success_msg">Account Created</h2>
+            </div>
+            <div class="close_msg_container">
+                <button id="success_msg_close" class="success_msg_close">Close</button>
+            </div>
+        </div>
+    </div>
+    <!--End Model-->
+
+    <!--Here is the body-->
+    <div>{{{body}}}</div>
+</body>
+</html>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">

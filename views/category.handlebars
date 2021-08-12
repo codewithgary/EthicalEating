@@ -1,0 +1,26 @@
+<head>
+    <style> 
+        ul { 
+            list-style:none; 
+            padding-left:0; 
+        } 
+    </style> 
+</head>
+
+<div class="viewCat">
+    <div class="redirect">
+        <a href="javascript:history.back()">Return to Home</a>
+    </div>
+    <br>
+    <h2 class="heading">{{#each results}}{{#if @first}}{{this.categoryname}}{{/if}}{{/each}} Recipes</h2>
+    <ul>
+        {{#each results}}
+            <li><a href='/recipe?id={{this.recipeid}}'><p>{{this.recipename}}</p></a></li>
+        {{/each}}
+    </ul>
+</div>
+
+<script type="module" src="/js/register.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/recipe-ingredient.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+

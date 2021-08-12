@@ -1,0 +1,132 @@
+.save_recipe, #full-table {
+    font-family: sans-serif;
+}
+
+/* .title {
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 30px;
+} */
+
+.save_recipe{
+    padding: 25px 0px;
+    line-height: 2;
+}
+
+.save_recipe label, .save_recipe input, .save_recipe button {
+    position: fixed;
+}
+
+.save_recipe input {
+    height: 35px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.save_recipe button {
+    margin-top: 20px;
+    background-color: #85c957;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.save_recipe button:hover {
+    background-color: #9ad870;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#full-table {
+    border-left: 1px solid rgb(194, 194, 194);
+    width: 80%;
+    height: 100%;
+    table-layout: fixed;
+    margin-left: 20%;
+    margin-top: -114px;
+}
+
+td {
+    vertical-align: top;
+    padding: 3px;
+}
+
+tr {
+    text-align: left;
+}
+
+button:not(.register_close):not(.logout_button):not(#save_button):not(#create_account_button) {
+    vertical-align: middle;
+    height: 100%;
+    background-color: rgb(109, 175, 241);
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+button:not(.register_close):not(.logout_button):not(#save_button):not(#create_account_button):hover {
+    background-color: rgb(141, 193, 245);
+}
+
+.build-column {
+    padding: 25px;
+}
+
+.ing-info, th {
+    font-weight: bold;
+    color: #e27c39;
+}
+
+#recipe-table tr, #ingredients-table tr {
+    line-height: 2;
+}
+
+#recipe-table tr td:nth-child(1), #recipe-table th:nth-child(1), 
+#ingredients-table tr td:nth-child(1), #ingredients-table th:nth-child(1) {
+    display: none;
+}
+
+#recipe-table tr:nth-child(even), #ingredients-table tr:nth-child(even) {
+    background: rgb(231,243,220);
+}
+
+
+#alert-div {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    background-color: transparent;
+    width: 400px;
+    right: 10px;
+    bottom: 0;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.alert.add-error {
+    background-color: #F44336;
+}
+
+.alert.remove-success {
+    background-color: #2196F3;
+}
+
+.register_modal_container {
+    z-index: 1;
+}

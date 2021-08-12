@@ -1,0 +1,38 @@
+<div class="login_form_container">
+    <div class="login_form_content">
+        <h2>LOG IN</h2>
+        <form class="login_form" action="/login" method="POST">
+            <fieldset class="login_form_fieldset">
+                <div id="username_input" class="form_input">
+                    <div>
+                        <label for="username">Username</label>
+                    </div>
+                    <div>
+                        <input type="text" name="username" id="username" value="" size="45" maxlength="35">
+                    </div>
+                </div>
+                <div id="password_input" class="form_input">
+                    <div>
+                        <label for="password">Password</label>
+                    </div>
+                    <div>
+                        <input type="password" name="password" id="password" value="" size="45" maxlength="35">
+                    </div>
+                </div>
+                {{#if messages.error}}
+                <div style="position: absolute">
+                    <span style="color:red">{{messages.error}}</span>
+                </div> 
+                {{/if}}
+                <div id="login_button_container" class="form_submit">
+                    <button id="login_button" type="submit">Login</button>
+                </div>
+                <div id="continue_guest">
+                    <a id="continue" href="javascript:history.back()">Continue as Guest</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script type="module" src="js/register.js"></script>

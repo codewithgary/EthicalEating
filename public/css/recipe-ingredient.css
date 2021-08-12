@@ -1,0 +1,100 @@
+.viewCat {
+    font-family: sans-serif;
+    margin-right: 20%;
+    margin-left: 20%
+    
+  }
+  
+  .heading {
+    /* background-color: rgb(139, 193, 248); */
+    color: #e27c39;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+  
+  .heading ul {
+    font-size: 13px;
+  }
+  
+  .viewCat ul li:not(.ingredient_list) {
+    border-bottom: rgb(216, 216, 216) 1px solid;
+    line-height: 30px;
+  }
+  
+  .ingredient_list {
+      line-height: 2;
+      border-bottom: rgb(216, 216, 216) 1px dotted;
+  }
+  
+  .viewCat ul li a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .viewCat li a:hover {
+  color: rgb(110, 110, 110);
+  }
+  
+  .redirect{
+      padding-top: 55px;
+  }
+  
+  .redirect a{
+      padding: 10px 30px;
+      text-decoration: none;
+      color: white;
+      background-color: rgb(109, 175, 241);
+  }
+  
+  .redirect a:hover {
+      background-color: rgb(141, 193, 245);
+  }
+  
+  .edit_link a{
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #e27c39;
+  }
+
+  .edit_link a:hover {
+    background-color: #ec9860;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+.fa-exclamation-triangle {
+    color: gray;
+    position: relative;
+}
+
+.fa-exclamation-triangle .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+
+    width: 300px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: normal;
+    bottom: 125%;
+    left: 50%;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.fa-exclamation-triangle:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.register_modal_container {
+    z-index: 2;
+}

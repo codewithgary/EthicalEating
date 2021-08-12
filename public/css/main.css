@@ -1,0 +1,39 @@
+.register_modal_container{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.register_modal_content{
+
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-width: 7px;
+}
+
+#create_account_button{
+    background-color: rgb(231, 243, 220);
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-family: monospace;
+    cursor: pointer;
+    padding: 15px;
+    border-style: solid;
+    border-color: gray;
+    font-style:none;
+    margin-bottom: 15px;
+}
+
+#first_name, #last_name, #user, #email, #pass, #confirm_password{
+    margin-top: 5px;
+    background-color: whitesmoke;
+}

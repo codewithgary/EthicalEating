@@ -1,0 +1,18 @@
+<head>
+    <style> 
+        ul { 
+            list-style:none; 
+            padding-left:0; 
+        } 
+    </style> 
+</head>
+
+<div class="viewCat">
+    <h2 class="heading">My Recipes</h2>
+    <ul>
+        {{#each results}}
+            <li><a href='/recipe?id={{this.recipeid}}'><p>{{this.recipename}}</p></a></li>
+        {{/each}}
+    </ul>
+</div>
+<link rel="stylesheet" type="text/css" href="/css/recipe-ingredient.css">

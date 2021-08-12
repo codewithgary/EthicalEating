@@ -1,0 +1,75 @@
+{{!-- <div class="title">
+    <p1>Build a Recipe</p1>
+</div> --}}
+<div class="save_recipe">
+    <label for="recipe_name">Recipe Name:</label><br>
+    <input type="text" id="recipe_name" name="recipe_name"><br>
+    <button id="save_button">Save Recipe</button>
+</div>
+<table id="full-table">
+    <tr>
+        <!--On the left, the work-in-progress recipe-->
+        <td class="build-column">
+            <div id="recipe">
+                <table id="recipe-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Added Ingredients</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="recipe-table-body"></tbody>
+                </table>
+            </div>
+        </td>
+
+        <!--On the right, the list of available ingredients-->
+        <td id="ingredients-column" class="build-column">
+            <div id="ingredients">
+                <table id="ingredients-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Available Ingredients</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ingredients-table-body"></tbody>
+                </table>
+            </div>
+        </td>
+        
+        <!--Ingredient info-->
+        <td class="build-column">
+            <div id="ing-info-div">
+                <div>
+                    <p class="ing-info">Ingredient Name</p>
+                    <table id="ing-name-table"></table>
+                </div>
+                <div>
+                    <p class="ing-info">Ethical Problem</p>
+                    <p id="ingredient-ethics"><br></p>
+                </div>
+                    <p class="ing-info">Ethical Problem Description</p>
+                    <p id="ethic-information"><br></p>
+                </div>
+
+                <div>
+                    <p class="ing-info">Alternatives</p>
+                    <table id="alt-table"></table>
+                </div> 
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="alert-div"></div>
+
+<script type="module" src="js/register.js"></script>
+<script type="text/javascript" src='/js/ServerInteractor.js'></script>
+<script type="text/javascript" src='/js/TableBuilder.js'></script>
+<script type="text/javascript" src='/js/build/BuildRecipeNotificationManager.js'></script>
+<script type="text/javascript" src='/js/build/BuildRecipeViewController.js'></script>
+<script type="text/javascript" src='/js/build/BuildRecipeFunctionFactory.js'></script>
+<link rel="stylesheet" type="text/css" href="css/build.css">
