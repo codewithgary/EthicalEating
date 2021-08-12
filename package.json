@@ -1,0 +1,31 @@
+{
+  "name": "ethical-eating",
+  "version": "1.0.0",
+  "description": "Group project of team Pacific Time for CS 361 at OSU.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
+  "author": "Team Pacific Time",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.13.3",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "method-override": "^3.0.0",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.4.1",
+    "pg-format": "^1.0.4",
+    "request": "^2.87.0"
+  }
+}
